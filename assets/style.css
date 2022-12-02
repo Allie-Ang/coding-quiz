@@ -1,3 +1,13 @@
-header {
-  background-color: black;
+* {
+  display: flex;
+  margin: auto;
+}
+.start-btn {
+  display: flex;
+  margin: auto;
+  padding: 15px;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
