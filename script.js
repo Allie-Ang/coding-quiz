@@ -1,3 +1,7 @@
-const startBtn = document.getElementById("start-btn");
+const startButton = document.getElementById("start-btn");
+startButton.addEventListener("click", startQuiz);
 
-function startQuiz() {}
+function startQuiz() {
+  console.log("STAAAART");
+  startButton.classList.add("hide");
+}
