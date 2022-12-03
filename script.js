@@ -7,7 +7,7 @@ startButton.addEventListener("click", function () {
 
   console.log("START");
   // show the question container
-  // reach into the html and grabe the question container
+  // reach into the html and grab the question container
   var questionContainerEl = document.querySelector("#questions-container");
   console.dir(questionContainerEl);
   // change the display property
@@ -20,13 +20,15 @@ startButton.addEventListener("click", function () {
   var question1Container = document.querySelector("#question-group1");
   question1Container.style.display = "block";
 
-  // when clicking answer, moves on to next question, with alerts
-
-
-
-
   // listen for clicks
   // evaluate answer
   // show next question group
   // Keep score
+});
+
+// when clicking answer, moves on to next question, with alerts. Add event listener for answer buttons
+var question2Btn = document.querySelector("#answer-btn2");
+question2Btn.addEventListener("click", function () {
+  question1Container.style.display = "none";
+  // Add alert for right or wrong answer
 });
