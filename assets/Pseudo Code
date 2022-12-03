@@ -3,7 +3,7 @@
 // Place to ask questions. Empty divs.
 
 // Start quiz function. place hidden elements in HTML. Only 1 shows.
-// event listern for start button. 
+// event listener for start button. 
 // Trigger start quiz fx. start page goes away (start element.set attribute class hide)
 // Allow questions to show. Qestion sec .class remove 
 // Allow time. Make interval. Global variable to hold time
