@@ -5,7 +5,7 @@ var startButton = document.querySelector("#start-btn");
 startButton.addEventListener("click", function () {
   // starting the time
 
-  console.log("START"); // sanity check
+  console.log("START");
   // show the question container
   // reach into the html and grabe the question container
   var questionContainerEl = document.querySelector("#questions-container");
@@ -15,12 +15,18 @@ startButton.addEventListener("click", function () {
 
   // hide start button
   startButton.style.display = "none";
+
   // show the first question
   var question1Container = document.querySelector("#question-group1");
   question1Container.style.display = "block";
-  // use the var that holds start button to change its style and display prop to none
+
+  // when clicking answer, moves on to next question, with alerts
+
+
+
 
   // listen for clicks
   // evaluate answer
   // show next question group
+  // Keep score
 });
