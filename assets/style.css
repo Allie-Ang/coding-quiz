@@ -1,13 +1,29 @@
 * {
   display: flex;
   margin: auto;
+  box-sizing: border-box;
 }
 .start-btn {
   display: flex;
   margin: auto;
   padding: 15px;
-  position: relative;
-  align-items: flex-start;
+}
+title {
+  background-color: blueviolet;
+}
+
+body .container.start-btn {
+  padding: 0;
+  margin: 0;
+  display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+}
+
+.questions-containter {
+  width: 800px;
+  max-width: 90%;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
 }
