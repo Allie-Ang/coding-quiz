@@ -1,10 +1,10 @@
 * {
-  display: flex;
+  /* display: flex; */
   margin: auto;
   box-sizing: border-box;
 }
 .start-btn {
-  display: flex;
+  /* display: flex; */
   margin: auto;
   padding: 15px;
 }
@@ -20,10 +20,15 @@ body .container.start-btn {
   align-items: center;
 }
 
-.questions-containter {
+#questions-container {
   width: 800px;
   max-width: 90%;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 2px;
+  display: none;
+}
+
+.questionDiv {
+    display: none;
 }

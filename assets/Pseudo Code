@@ -5,7 +5,7 @@
 // Start quiz function. place hidden elements in HTML. Only 1 shows.
 // event listener for start button. 
 // Trigger start quiz fx. start page goes away (start element.set attribute class hide)
-// Allow questions to show. Qestion sec .class remove 
+// Allow questions to show. Question sec .class remove 
 // Allow time. Make interval. Global variable to hold time
 // Div to how time. Text content. time. 1000 mil = 1 sec. time -- and update with text content.
 // text content update. 
