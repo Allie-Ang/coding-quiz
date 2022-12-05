@@ -1,30 +1,6 @@
 // reach into the html and grabe the start button
 var startButton = document.querySelector("#start-btn");
 
-// Hiding Q1
-function renderQ2() {
-  var question1Container = document.querySelector("#question-group1");
-  question1Container.style.display = "none";
-  // Showing Q2
-  var question2Container = document.querySelector("#question-group2");
-  question2Container.style.display = "block";
-  // Q2 buttons
-  var q2Btn = document.querySelectorAll(".q2Btn");
-  for (var i = 0; i < q2Btn.length; i++) {
-    q2Btn[i].addEventListener("click", function () {
-      if (this.value == "true") {
-        //increase score
-        alert("CORRECT!");
-      } else {
-        //deduct time
-        alert("TIME DEDUCTED :(");
-        console.log("incorrect");
-      }
-      renderQ3();
-    });
-  }
-}
-
 // Q3
 function renderQ3() {
   var question2Container = document.querySelector("#question-group2");
@@ -49,7 +25,29 @@ function renderQ3() {
   }
 }
 
-// timer for start timer function
+// Hiding Q1
+function renderQ2() {
+  var question1Container = document.querySelector("#question-group1");
+  question1Container.style.display = "none";
+  // Showing Q2
+  var question2Container = document.querySelector("#question-group2");
+  question2Container.style.display = "block";
+  // Q2 buttons
+  var q2Btn = document.querySelectorAll(".q2Btn");
+  for (var i = 0; i < q2Btn.length; i++) {
+    q2Btn[i].addEventListener("click", function () {
+      if (this.value == "true") {
+        //increase score
+        alert("CORRECT!");
+      } else {
+        //deduct time
+        alert("TIME DEDUCTED :(");
+        console.log("incorrect");
+      }
+      renderQ3();
+    });
+  }
+}
 
 // when the start button is clicked
 startButton.addEventListener("click", function () {
