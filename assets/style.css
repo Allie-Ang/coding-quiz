@@ -1,10 +1,8 @@
 * {
-  /* display: flex; */
   margin: auto;
   box-sizing: border-box;
 }
 .start-btn {
-  /* display: flex; */
   margin: auto;
   padding: 15px;
 }
@@ -30,5 +28,11 @@ body .container.start-btn {
 }
 
 .questionDiv {
-    display: none;
+  display: none;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
