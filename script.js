@@ -19,9 +19,13 @@ startButton.addEventListener("click", function () {
     timerEl.textContent = currentTime;
     // if the number i'm working w/ === 0
     if (currentTime === 0) clearInterval(myTimer);
-
+    sendMesage();
     // -- and whatever else you want to do when it hits 0
   }, 1000);
+
+  function sendMesage() {
+    timerEl.textContent = "TIMES UP!";
+  }
 
   console.log("START");
   // show the question container
@@ -43,7 +47,6 @@ startButton.addEventListener("click", function () {
   for (var i = 0; i < q1Btn.length; i++) {
     q1Btn[i].addEventListener("click", function (event) {
       if (this.value == "true") {
-        //increase score
         alert("CORRECT!");
         console.log("correct");
       } else {
@@ -68,7 +71,6 @@ function renderQ2() {
   for (var i = 0; i < q2Btn.length; i++) {
     q2Btn[i].addEventListener("click", function () {
       if (this.value == "true") {
-        //increase score
         alert("CORRECT!");
       } else {
         //deduct time
@@ -94,7 +96,6 @@ function renderQ3() {
   for (var i = 0; i < q3Btn.length; i++) {
     q3Btn[i].addEventListener("click", function () {
       if (this.value == "true") {
-        //increase score
         alert("CORRECT!");
         console.log("correct");
       } else {
@@ -104,4 +105,22 @@ function renderQ3() {
       }
     });
   }
+}
+
+// User info for storage
+
+function signUp() {
+  var signUp = document.querySelector("#submission");
+  signUpstyle.display = "none";
+  var enterBtn = document.querySelector("#enter-btn");
+
+  enterBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    var user = {
+      initial: initialsInput.value.trim(),
+    };
+
+    // local storage
+    localStorage.setItem("user", JSON.stringify(user));
+  });
 }

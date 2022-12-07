@@ -12,7 +12,7 @@
 
   <body>
     <div class="container">
-      <h2 id="timer">30</h2>
+      <h2 id="timer">15</h2>
       <title>CODE QUIZ: JAVASCRIPT</title>
      
       <div><button id="start-btn">START QUIZ</button></div>
@@ -41,10 +41,20 @@
         <div class="questionDiv" id="question-group3">
           <h3 id="question3">Question 3</h3>
           <div id="answer-btn3" class="answer-btn-grid">
-            <button class="q3btn" value="true">Answer 1</button>
+            <button class="q3btn">Answer 1</button>
             <button class="q3btn">Answer 2</button>
             <button class="q3btn">Answer 3</button>
-            <button class="q3btn">Answer 4</button>
+            <button class="q3btn" value="true">Answer 4</button>
+          </div>
+    </div>
+    <div id ="submission">
+      <h2>Sign Up</h2>
+        <form method="POST">
+          <div class="input-group">
+            <label for="initials">Initials</label>
+            <input type="text" id="initials" placeholder="" />
+            <button id="enter-btn">Enter</button>
+         </form>
           </div>
     </div>
     <script src="./script.js"></script>
