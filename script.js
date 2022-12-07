@@ -8,6 +8,8 @@ function renderQ3() {
 
   var question3Container = document.querySelector("#question-group3");
   question3Container.style.display = "block";
+  console.dir(question3Container);
+  console.log(question3Container);
 
   var q3Btn = document.querySelectorAll(".q3Btn");
   for (var i = 0; i < q3Btn.length; i++) {
@@ -52,13 +54,32 @@ function renderQ2() {
 // when the start button is clicked
 startButton.addEventListener("click", function () {
   // starting the time
+  var myTimer = setInterval(function () {
+    // reach into the html, grab the element that hold our timer (queryselector)
+    var timerEl = document.getElementById("timer");
+
+    // extract the first number (.textcontent or .innerhtml or i need console.dir the obj and look at it)
+    var currentTime = timerEl.textContent; // string that shows time from html
+    // change that number from a string to a number so we can do math (parseInt)
+    currentTime = parseInt(currentTime); // actual number you can now math
+
+    // decrement the number
+    currentTime = currentTime - 1;
+    // put it back in the timer element (assign a value to the property you extracted)
+    timerEl.textContent = currentTime;
+
+    // if the number i'm working w/ === 0
+    // -- clearInterval(myTimer)
+    // -- and whatever else you want to do when it hits 0
+
+  }, 1000);
 
   console.log("START");
   // show the question container
   // reach into the html and grab the question container
   var questionContainerEl = document.querySelector("#questions-container");
   console.dir(questionContainerEl);
-  // change the display property
+  // change the display property to show it
   questionContainerEl.style.display = "block";
 
   // hide start button
