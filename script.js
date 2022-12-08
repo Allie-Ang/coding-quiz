@@ -1,15 +1,15 @@
 // reach into the html and grabe the start button
 var startButton = document.querySelector("#start-btn");
+// reach into the html, grab the element that hold our timer (queryselector)
+var timerEl = document.getElementById("timer");
+var currentTime;
 
 // when the start button is clicked
 startButton.addEventListener("click", function () {
   // starting the time
   var myTimer = setInterval(function () {
-    // reach into the html, grab the element that hold our timer (queryselector)
-    var timerEl = document.getElementById("timer");
-
     // extract the first number (.textcontent or .innerhtml or i need console.dir the obj and look at it)
-    var currentTime = timerEl.textContent; // string that shows time from html
+    currentTime = timerEl.textContent; // string that shows time from html
     // change that number from a string to a number so we can do math (parseInt)
     currentTime = parseInt(currentTime); // actual number you can now math
 
@@ -18,14 +18,17 @@ startButton.addEventListener("click", function () {
     // put it back in the timer element (assign a value to the property you extracted)
     timerEl.textContent = currentTime;
     // if the number i'm working w/ === 0
-    if (currentTime === 0) clearInterval(myTimer);
-    sendMesage();
-    // -- and whatever else you want to do when it hits 0
+    if (currentTime <= 0) {
+      clearInterval(myTimer);
+      // -- and whatever else you want to do when it hits 0
+    }
+    // sendMesage();
+
   }, 1000);
 
-  function sendMesage() {
-    timerEl.textContent = "TIMES UP!";
-  }
+  // function sendMesage() {
+  //   timerEl.textContent = "TIMES UP!";
+  // }
 
   console.log("START");
   // show the question container
@@ -46,12 +49,22 @@ startButton.addEventListener("click", function () {
 
   for (var i = 0; i < q1Btn.length; i++) {
     q1Btn[i].addEventListener("click", function (event) {
-      if (this.value == "true") {
+      if (this.value === "true") {
         alert("CORRECT!");
         console.log("correct");
       } else {
-        //deduct time
-        alert("TIME DEDUCTED :(");
+        // ** decrease the time **
+        // get the value of the current time
+        currentTime = timerEl.textContent;
+        console.log(timerEl);
+        console.dir(timerEl);
+        // turn the string into a number
+        currentTime = parseInt(currentTime);
+        // decrease it by 5
+        currentTime = currentTime - 5;
+        // put it back on the screen
+        timerEl.textContent = currentTime;
+        // alert("TIME DEDUCTED :(");
         console.log("incorrect");
       }
       renderQ2();
@@ -109,18 +122,19 @@ function renderQ3() {
 
 // User info for storage
 
-function signUp() {
-  var signUp = document.querySelector("#submission");
-  signUpstyle.display = "none";
-  var enterBtn = document.querySelector("#enter-btn");
+// function signUp() {
+//   var signUp = document.querySelector("#submission");
+//   signUpstyle.display = "none";
+//   var enterBtn = document.querySelector("#enter-btn");
 
-  enterBtn.addEventListener("click", function (event) {
-    event.preventDefault();
-    var user = {
-      initial: initialsInput.value.trim(),
-    };
+//   enterBtn.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     var user = {
+//       initial: initialsInput.value.trim(),
+//       console.log(user)
+//     };
 
-    // local storage
-    localStorage.setItem("user", JSON.stringify(user));
-  });
-}
+//     // local storage
+//     localStorage.setItem("user", JSON.stringify(user));
+//   });
+// }
