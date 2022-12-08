@@ -51,8 +51,6 @@ startButton.addEventListener("click", function () {
         // ** decrease the time **
         // get the value of the current time
         currentTime = timerEl.textContent;
-        console.log(timerEl);
-        console.dir(timerEl);
         // turn the string into a number
         currentTime = parseInt(currentTime);
         // decrease it by 5
@@ -131,7 +129,7 @@ function renderQ3() {
 // value of time = high score
 // store
 
-var userInfo = document.querySelector("input-group");
+var userInfo = document.querySelector("enter-btn");
 enterBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -141,5 +139,5 @@ enterBtn.addEventListener("click", function (event) {
 
   // set new submission to local storage
   localStorage.setItem("user", JSON.stringify(user));
+  console.log(user);
 });
-

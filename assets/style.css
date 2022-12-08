@@ -2,9 +2,9 @@
   margin: auto;
   box-sizing: border-box;
 }
-.bnt1 {
+.container {
   margin: auto;
-  padding: 15px;
+  padding: 100px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -13,7 +13,7 @@ title {
   background-color: blueviolet;
 }
 
-body .container {
+body {
   padding: 0;
   margin: 0;
   justify-content: center;
@@ -48,8 +48,10 @@ h2 {
 }
 
 .q2Btn {
+  margin: 7px;
   display: flex;
   flex-direction: column;
+  justify-content: start;
 }
 
 .submission {
