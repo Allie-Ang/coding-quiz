@@ -3,6 +3,7 @@ var startButton = document.querySelector("#start-btn");
 // reach into the html, grab the element that hold our timer (queryselector)
 var timerEl = document.getElementById("timer");
 var currentTime;
+var sendMessage;
 
 // when the start button is clicked
 startButton.addEventListener("click", function () {
@@ -20,12 +21,9 @@ startButton.addEventListener("click", function () {
     // if the number i'm working w/ === 0
     if (currentTime <= 0) {
       clearInterval(myTimer);
+      alert("OUT OF TIME!");
     }
   }, 1000);
-
-  // function sendMesage() {
-  //   timerEl.textContent = "TIMES UP!";
-  // }
 
   console.log("START");
   // show the question container
@@ -109,8 +107,6 @@ function renderQ3() {
 
   var question3Container = document.querySelector("#question-group3");
   question3Container.style.display = "block";
-  console.dir(question3Container);
-  console.log(question3Container);
 
   var q3Btn = document.querySelectorAll(".q3Btn");
   for (var i = 0; i < q3Btn.length; i++) {
