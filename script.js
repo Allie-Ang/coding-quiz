@@ -20,7 +20,6 @@ startButton.addEventListener("click", function () {
     // if the number i'm working w/ === 0
     if (currentTime <= 0) {
       clearInterval(myTimer);
-      // -- and whatever else you want to do when it hits 0
     }
   }, 1000);
 
@@ -62,7 +61,7 @@ startButton.addEventListener("click", function () {
         currentTime = currentTime - 5;
         // put it back on the screen
         timerEl.textContent = currentTime;
-        // alert("TIME DEDUCTED :(");
+        alert("TIME DEDUCTED :(");
         console.log("incorrect");
       }
       renderQ2();
@@ -95,7 +94,7 @@ function renderQ2() {
         currentTime = currentTime - 5;
         // put it back on the screen
         timerEl.textContent = currentTime;
-        // alert("TIME DEDUCTED :(");
+        alert("TIME DEDUCTED :(");
         console.log("incorrect");
       }
       renderQ3();
@@ -128,7 +127,7 @@ function renderQ3() {
         currentTime = currentTime - 5;
         // put it back on the screen
         timerEl.textContent = currentTime;
-        // alert("TIME DEDUCTED :(");
+        alert("TIME DEDUCTED :(");
         console.log("incorrect");
       }
     });
