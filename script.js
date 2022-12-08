@@ -84,8 +84,6 @@ function renderQ2() {
         // ** decrease the time **
         // get the value of the current time
         currentTime = timerEl.textContent;
-        console.log(timerEl);
-        console.dir(timerEl);
         // turn the string into a number
         currentTime = parseInt(currentTime);
         // decrease it by 5
@@ -115,8 +113,6 @@ function renderQ3() {
         // ** decrease the time **
         // get the value of the current time
         currentTime = timerEl.textContent;
-        console.log(timerEl);
-        console.dir(timerEl);
         // turn the string into a number
         currentTime = parseInt(currentTime);
         // decrease it by 5
@@ -131,20 +127,19 @@ function renderQ3() {
 }
 
 // User info for storage
+// Take time value
+// value of time = high score
+// store
 
-// function signUp() {
-//   var signUp = document.querySelector("#submission");
-//   signUpstyle.display = "none";
-//   var enterBtn = document.querySelector("#enter-btn");
+var userInfo = document.querySelector("input-group");
+enterBtn.addEventListener("click", function (event) {
+  event.preventDefault();
 
-//   enterBtn.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     var user = {
-//       initial: initialsInput.value.trim(),
-//       console.log(user)
-//     };
+  var user = {
+    initials: userInfo.value.trim(),
+  };
 
-//     // local storage
-//     localStorage.setItem("user", JSON.stringify(user));
-//   });
-// }
+  // set new submission to local storage
+  localStorage.setItem("user", JSON.stringify(user));
+});
+
