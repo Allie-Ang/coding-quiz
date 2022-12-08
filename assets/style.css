@@ -59,7 +59,7 @@ h2 {
   display: none;
 }
 
-.start-btn {
+#start-btn {
   justify-content: center;
   align-items: center;
   text-align: center;
