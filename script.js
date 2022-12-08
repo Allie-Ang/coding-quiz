@@ -22,8 +22,6 @@ startButton.addEventListener("click", function () {
       clearInterval(myTimer);
       // -- and whatever else you want to do when it hits 0
     }
-    // sendMesage();
-
   }, 1000);
 
   // function sendMesage() {
@@ -86,8 +84,18 @@ function renderQ2() {
       if (this.value == "true") {
         alert("CORRECT!");
       } else {
-        //deduct time
-        alert("TIME DEDUCTED :(");
+        // ** decrease the time **
+        // get the value of the current time
+        currentTime = timerEl.textContent;
+        console.log(timerEl);
+        console.dir(timerEl);
+        // turn the string into a number
+        currentTime = parseInt(currentTime);
+        // decrease it by 5
+        currentTime = currentTime - 5;
+        // put it back on the screen
+        timerEl.textContent = currentTime;
+        // alert("TIME DEDUCTED :(");
         console.log("incorrect");
       }
       renderQ3();
@@ -109,11 +117,18 @@ function renderQ3() {
   for (var i = 0; i < q3Btn.length; i++) {
     q3Btn[i].addEventListener("click", function () {
       if (this.value == "true") {
-        alert("CORRECT!");
-        console.log("correct");
-      } else {
-        //deduct time
-        alert("TIME DEDUCTED :(");
+        // ** decrease the time **
+        // get the value of the current time
+        currentTime = timerEl.textContent;
+        console.log(timerEl);
+        console.dir(timerEl);
+        // turn the string into a number
+        currentTime = parseInt(currentTime);
+        // decrease it by 5
+        currentTime = currentTime - 5;
+        // put it back on the screen
+        timerEl.textContent = currentTime;
+        // alert("TIME DEDUCTED :(");
         console.log("incorrect");
       }
     });
