@@ -58,3 +58,9 @@ h2 {
 .submission {
   display: none;
 }
+
+.start-btn {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
