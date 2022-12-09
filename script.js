@@ -129,15 +129,25 @@ function renderQ3() {
 // value of time = high score
 // store
 
-var userInfo = document.querySelector("enter-btn");
-enterBtn.addEventListener("click", function (event) {
+var userName = document.getElementById("initials");
+var userInfo = document.getElementById("enter-btn");
+var form = document.getElementById("submission");
+var LOL = document.getElementById("LOL");
+
+userInfo.addEventListener("click", function (event) {
   event.preventDefault();
 
   var user = {
-    initials: userInfo.value.trim(),
+    [userName.value.trim()]: currentTime,
+    initials: userName.value.trim(),
+    value: currentTime,
   };
 
   // set new submission to local storage
   localStorage.setItem("user", JSON.stringify(user));
   console.log(user);
+  var newH2 = document.createElement("h2");
+  newH2.innerText = user.initials + ":" + user.value;
+  form.insertBefore(newH2, LOL.nextSibling);
 });
+
