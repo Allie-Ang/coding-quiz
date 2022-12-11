@@ -2,7 +2,7 @@
 
 This is a timed quiz on JavaScirpt. 
 
-If the user gets an answer wrong, the timer automatically reduces time from the clock. 
+If the user gets an answer wrong, the timer automatically reduces time from the clock. Prompts will appear to the user if their answer choice was correct or incorrect.
 
 The user is also able to save their scores with initials.
 
