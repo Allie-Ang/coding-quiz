@@ -150,4 +150,3 @@ userInfo.addEventListener("click", function (event) {
   newH2.innerText = user.initials + ":" + user.value;
   form.insertBefore(newH2, LOL.nextSibling);
 });
-

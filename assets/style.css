@@ -55,6 +55,13 @@ h2 {
   justify-content: start;
 }
 
+.q3Btn {
+  margin: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
 .submission {
   display: none;
 }
